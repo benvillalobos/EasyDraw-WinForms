@@ -1,0 +1,8 @@
+C:\Users\BenVillalobos\Documents\great-minds-robotics-software-libraries\C#\EasyDrawLib\EasyDrawLib\bin\Release\EasyDrawLib.dll
+C:\Users\BenVillalobos\Documents\great-minds-robotics-software-libraries\C#\EasyDrawLib\EasyDrawLib\bin\Release\EasyDrawLib.pdb
+C:\Users\BenVillalobos\Documents\great-minds-robotics-software-libraries\C#\EasyDrawLib\EasyDrawLib\obj\Release\EasyDrawLib.EasyDrawForm.resources
+C:\Users\BenVillalobos\Documents\great-minds-robotics-software-libraries\C#\EasyDrawLib\EasyDrawLib\obj\Release\EasyDrawLib.HelpForm.resources
+C:\Users\BenVillalobos\Documents\great-minds-robotics-software-libraries\C#\EasyDrawLib\EasyDrawLib\obj\Release\EasyDrawLib.csproj.GenerateResource.Cache
+C:\Users\BenVillalobos\Documents\great-minds-robotics-software-libraries\C#\EasyDrawLib\EasyDrawLib\obj\Release\EasyDrawLib.dll
+C:\Users\BenVillalobos\Documents\great-minds-robotics-software-libraries\C#\EasyDrawLib\EasyDrawLib\obj\Release\EasyDrawLib.pdb
+C:\Users\BenVillalobos\Documents\great-minds-robotics-software-libraries\C#\EasyDrawLib\EasyDrawLib\obj\Release\EasyDrawLib.csprojResolveAssemblyReference.cache

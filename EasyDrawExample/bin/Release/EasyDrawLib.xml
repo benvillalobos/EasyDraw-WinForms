@@ -1,0 +1,1010 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EasyDrawLib</name>
+    </assembly>
+    <members>
+        <member name="T:EasyDrawLib.GraphicsItem">
+            <summary>
+            A generic sprite that can be drawn
+            </summary>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsItem.Draw(System.Int32)">
+            <summary>
+            Draws the sprite
+            </summary>
+            <param name="gridSize"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:EasyDrawLib.GraphicsItem.#ctor(System.Drawing.Color,System.Single,System.Drawing.Point,System.Drawing.Size)" -->
+        <member name="P:EasyDrawLib.GraphicsItem.DrawColor">
+            <summary>
+            The color to draw the sprite with
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItem.PenThickness">
+            <summary>
+            The pen thickness to use when drawing
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItem.Visible">
+            <summary>
+            The sprite's visibility
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItem.HitBox">
+            <summary>
+            The hitbox for the sprite
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItem.GridLocation">
+            <summary>
+            The location in grid coordinates
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItem.Size">
+            <summary>
+            The size of the sprite
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItem.X">
+            <summary>
+            The X position in grid coordinates
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItem.Y">
+            <summary>
+            The Y position in grid coordinates
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItem.Width">
+            <summary>
+            The width of the sprite
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItem.Height">
+            <summary>
+            The height of the sprite
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItem.Right">
+            <summary>
+            Returns the right coordinate of the sprite accounting for center as origin.
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItem.Left">
+            <summary>
+            Returns the left coordinate of the sprite accounting for center as origin.
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItem.Top">
+            <summary>
+            The top of the sprite
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItem.Bottom">
+            <summary>
+            The bottom of the sprite
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItem.Origin">
+            <summary>
+            The origin of the sprite
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItem.Name">
+            <summary>
+            The name of the sprite
+            </summary>
+        </member>
+        <member name="T:EasyDrawLib.HelpForm">
+            <summary>
+            A simple form showing helpful information for someone new to the project
+            </summary>
+        </member>
+        <member name="F:EasyDrawLib.HelpForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EasyDrawLib.HelpForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EasyDrawLib.HelpForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:EasyDrawLib.HelpForm.#ctor">
+            <summary>
+            A simple form showing helpful information for someone new to the project
+            </summary>
+        </member>
+        <member name="T:EasyDrawLib.EasyDrawForm">
+            <summary>
+            The form to use for easily drawing stuff
+            </summary>
+        </member>
+        <member name="F:EasyDrawLib.EasyDrawForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:EasyDrawLib.EasyDrawForm.TheHelpButton">
+            <summary>
+            The help button
+            </summary>
+        </member>
+        <member name="F:EasyDrawLib.EasyDrawForm._canvas">
+            <summary>
+            The main canvas everything but the grid is drawn on
+            </summary>
+        </member>
+        <member name="F:EasyDrawLib.EasyDrawForm._mainGfx">
+            <summary>
+            The main graphics object that draws onto the canvas
+            </summary>
+        </member>
+        <member name="F:EasyDrawLib.EasyDrawForm._showGrid">
+            <summary>
+            Determines whether to show the grid or not
+            </summary>
+        </member>
+        <member name="F:EasyDrawLib.EasyDrawForm._gridSize">
+            <summary>
+            The size of each grid square
+            </summary>
+        </member>
+        <member name="F:EasyDrawLib.EasyDrawForm._isCanvasUpdateNeeded">
+            <summary>
+            A boolean determining whether to redraw the main canvas
+            </summary>
+        </member>
+        <member name="F:EasyDrawLib.EasyDrawForm._graphicsItems">
+            <summary>
+            The collection of all graphics items being drawn
+            </summary>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.#ctor">
+            <summary>
+            A form to make it easier to draw things.
+            </summary>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.prepareGrid">
+            <summary>
+            Draws the grid onto the grid canvas.
+            </summary>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.SaveImage">
+            <summary>
+            Saves everything that's on the main canvas as an image.
+            </summary>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.GetSprite(System.String)">
+            <summary>
+            Gets a sprite with the specified name. Be sure to draw it first.
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.RemoveSprite(System.String)">
+            <summary>
+            Removes a sprite with the specified name. Be sure to draw it first.
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.RemoveSprite(EasyDrawLib.GraphicsItem)">
+            <summary>
+            Removes the specified sprite.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.ConvertToGridCoordinates(System.Int32)">
+            <summary>
+            Returns the closest grid coordinate relative to the coord, rounding down.
+            </summary>
+            <param name="coord">The coordinate to convert</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.ConvertToGridCoordinates(System.Drawing.Point)">
+            <summary>
+            Returns the closest grid coordinate relative to the coord, rounding down.
+            </summary>
+            <param name="coord">The coordinate to convert</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            The form drawing itself
+            </summary>
+            <param name="e">The paint event arguments</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.updateCanvas(System.Boolean)">
+            <summary>
+            Updates the main and grid canvases
+            </summary>
+            <param name="redrawEntireCanvas"></param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.Update">
+            <summary>
+            Updates the form, forces it to redraw
+            </summary>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawCircle(System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Draws a circle on the main canvas.
+            </summary>
+            <param name="x">The X position in grid coordinates</param>
+            <param name="y">The Y position in grid coordinates</param>
+            <param name="radius">The radius to draw with</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawCircle(System.Int32,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Draws a circle on the main canvas
+            </summary>
+            <param name="x">The X position in grid coordinates</param>
+            <param name="y">The Y position in grid coordinates</param>
+            <param name="radius">The radius to draw with</param>
+            <param name="name">The name to refer to this by</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawCircle(System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Boolean)">
+            <summary>
+            Draws a circle on the main canvas
+            </summary>
+            <param name="x">The X position in grid coordinates</param>
+            <param name="y">The Y position in grid coordinates</param>
+            <param name="radius">The radius to draw with</param>
+            <param name="drawColor">The color to draw with</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawCircle(System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.String,System.Boolean)">
+            <summary>
+            Draws a circle on the main canvas
+            </summary>
+            <param name="x">The X position in grid coordinates</param>
+            <param name="y">The Y position in grid coordinates</param>
+            <param name="radius">The radius of the circle</param>
+            <param name="drawColor">The color to draw with</param>
+            <param name="name">The name to refer to this by</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawSquare(System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Draws a square on the main canvas
+            </summary>
+            <param name="x">The X position in grid coordinates</param>
+            <param name="y">The Y position in grid coordinates</param>
+            <param name="sideLength">The length of each side</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawSquare(System.Int32,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Draws a square on the main canvas
+            </summary>
+            <param name="x">The X position in grid coordinates</param>
+            <param name="y">The Y position in grid coordinates</param>
+            <param name="sideLength">The length of each side</param>
+            <param name="name">The name to refer to this by</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawSquare(System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Boolean)">
+            <summary>
+            Draws a square on the main canvas
+            </summary>
+            <param name="x">The X position in grid coordinates</param>
+            <param name="y">The Y position in grid coordinates</param>
+            <param name="sideLength">The length of each side</param>
+            <param name="drawColor">The color to draw with</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawSquare(System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.String,System.Boolean)">
+            <summary>
+            Draws a square on the main canvas
+            </summary>
+            <param name="x">The X position in grid coordinates</param>
+            <param name="y">The Y position in grid coordinates</param>
+            <param name="sideLength">The length of each side</param>
+            <param name="drawColor">The color to draw with</param>
+            <param name="name">The name to refer to this by</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawEllipse(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Draws an ellipse on the main canvas
+            </summary>
+            <param name="x">The X position in grid coordinates</param>
+            <param name="y">The Y position in grid coordinates</param>
+            <param name="width">The width to draw with</param>
+            <param name="height">The height to draw with</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawEllipse(System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Draws an ellipse on the main canvas
+            </summary>
+            <param name="x">The X position in grid coordinates</param>
+            <param name="y">The Y position in grid coordinates</param>
+            <param name="width">The width to draw with</param>
+            <param name="height">The height to draw with</param>
+            <param name="name">The name to refer to this by</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawEllipse(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Boolean)">
+            <summary>
+            Draws an ellipse on the main canvas
+            </summary>
+            <param name="x">The X position in grid coordinates</param>
+            <param name="y">The Y position in grid coordinates</param>
+            <param name="width">The width to draw with</param>
+            <param name="height">The height to draw with</param>
+            <param name="drawColor">The color to draw  with</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawEllipse(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.String,System.Boolean)">
+            <summary>
+            Draws an ellipse on the main canvas
+            </summary>
+            <param name="x">The X position in grid coordinates</param>
+            <param name="y">The Y position in grid coordinates</param>
+            <param name="width">The width to draw with</param>
+            <param name="height">The height to draw with</param>
+            <param name="drawColor">The color to draw  with</param>
+            <param name="name">The name to refer to this by</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawLine(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Draws a line on the main canvas
+            </summary>
+            <param name="x1">The X coordinate in grid coordinates of the first point</param>
+            <param name="y1">The Y coordinate in grid coordinates of the first point</param>
+            <param name="x2">The X coordinate in grid coordinates of the second point</param>
+            <param name="y2">The Y coordinate in grid coordinates of the second point</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawLine(System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Draws a line on the main canvas
+            </summary>
+            <param name="x1">The X coordinate in grid coordinates of the first point</param>
+            <param name="y1">The Y coordinate in grid coordinates of the first point</param>
+            <param name="x2">The X coordinate in grid coordinates of the second point</param>
+            <param name="y2">The Y coordinate in grid coordinates of the second point</param>
+            <param name="name">The name to refer to this by</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawLine(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color)">
+            <summary>
+            Draws a line on the main canvas
+            </summary>
+            <param name="x1">The X coordinate in grid coordinates of the first point</param>
+            <param name="y1">The Y coordinate in grid coordinates of the first point</param>
+            <param name="x2">The X coordinate in grid coordinates of the second point</param>
+            <param name="y2">The Y coordinate in grid coordinates of the second point</param>
+            <param name="drawColor">The color to draw with</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawLine(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.String)">
+            <summary>
+            Draws a line on the main canvas
+            </summary>
+            <param name="x1">The X coordinate in grid coordinates of the first point</param>
+            <param name="y1">The Y coordinate in grid coordinates of the first point</param>
+            <param name="x2">The X coordinate in grid coordinates of the second point</param>
+            <param name="y2">The Y coordinate in grid coordinates of the second point</param>
+            <param name="drawColor">The color to draw with</param>
+            <param name="name">The name to refer to this by</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawLine(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            Draws a line on the main canvas
+            </summary>
+            <param name="p1">The first point to connect</param>
+            <param name="p2">The second point to connect</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawLine(System.Drawing.Point,System.Drawing.Point,System.String)">
+            <summary>
+            Draws a line on the main canvas
+            </summary>
+            <param name="p1">The first point to connect</param>
+            <param name="p2">The second point to connect</param>
+            <param name="name">The name to refer to this by</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawLine(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color)">
+            <summary>
+            Draws a line on the main canvas
+            </summary>
+            <param name="p1">The first point to connect</param>
+            <param name="p2">The second point to connect</param>
+            <param name="drawColor">The color to draw with</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawLine(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.String)">
+            <summary>
+            Draws a line on the main canvas
+            </summary>
+            <param name="p1">The first point to connect</param>
+            <param name="p2">The second point to connect</param>
+            <param name="drawColor">The color to draw with</param>
+            <param name="name">The name to refer to this by</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawRectangle(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Draws a rectangle on the main canvas
+            </summary>
+            <param name="x">The X coordinate in grid coordinates</param>
+            <param name="y">The Y coordinate in grid coordinates</param>
+            <param name="width">The X coordinate in grid coordinates of the second point</param>
+            <param name="height">The Y coordinate in grid coordinates of the second point</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawRectangle(System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Draws a rectangle on the main canvas
+            </summary>
+            <param name="x">The X coordinate in grid coordinates</param>
+            <param name="y">The Y coordinate in grid coordinates</param>
+            <param name="width">The X coordinate in grid coordinates of the second point</param>
+            <param name="height">The Y coordinate in grid coordinates of the second point</param>
+            <param name="name">The name to refer to this by</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawRectangle(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Boolean)">
+            <summary>
+            Draws a rectangle on the main canvas
+            </summary>
+            <param name="x">The X coordinate in grid coordinates</param>
+            <param name="y">The Y coordinate in grid coordinates</param>
+            <param name="width">The X coordinate in grid coordinates of the second point</param>
+            <param name="height">The Y coordinate in grid coordinates of the second point</param>
+            <param name="drawColor">The color to draw with</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawRectangle(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.String,System.Boolean)">
+            <summary>
+            Draws a rectangle on the main canvas
+            </summary>
+            <param name="x">The X coordinate in grid coordinates</param>
+            <param name="y">The Y coordinate in grid coordinates</param>
+            <param name="width">The X coordinate in grid coordinates of the second point</param>
+            <param name="height">The Y coordinate in grid coordinates of the second point</param>
+            <param name="drawColor">The color to draw with</param>
+            <param name="name">The name to refer to this by</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawTriangle(System.Drawing.Point,System.Drawing.Point,System.Drawing.Point,System.Boolean)">
+            <summary>
+            Draws a triangle on the main canvas
+            </summary>
+            <param name="p1">The first point to connect</param>
+            <param name="p2">The second point to connect</param>
+            <param name="p3">The third point to connect</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawTriangle(System.Drawing.Point,System.Drawing.Point,System.Drawing.Point,System.String,System.Boolean)">
+            <summary>
+            Draws a triangle on the main canvas
+            </summary>
+            <param name="p1">The first point to connect</param>
+            <param name="p2">The second point to connect</param>
+            <param name="p3">The third point to connect</param>
+            <param name="name">The name to refer to this by</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawTriangle(System.Drawing.Point,System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Boolean)">
+            <summary>
+            Draws a triangle on the main canvas
+            </summary>
+            <param name="p1">The first point to connect</param>
+            <param name="p2">The second point to connect</param>
+            <param name="p3">The third point to connect</param>
+            <param name="color">The color to draw with</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawTriangle(System.Drawing.Point,System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.String,System.Boolean)">
+            <summary>
+            Draws a triangle on the main canvas
+            </summary>
+            <param name="p1">The first point to connect</param>
+            <param name="p2">The second point to connect</param>
+            <param name="p3">The third point to connect</param>
+            <param name="color">The color to draw with</param>
+            <param name="name">The name to refer to this by</param>
+            <param name="fill">Whether to fill it in or not</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawPolygon(System.Boolean,System.Drawing.Point[])">
+            <summary>
+            Draws a polygon with any number of sides on the main canvas
+            </summary>
+            <param name="fill">Whether to fill it in or not</param>
+            <param name="points">The points to connect for the polygon</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawPolygon(System.String,System.Boolean,System.Drawing.Point[])">
+            <summary>
+            Draws a polygon with any number of sides on the main canvas
+            </summary>
+            <param name="name">The name to associate this with</param>
+            <param name="fill">Whether to fill it in or not</param>
+            <param name="points">The points to connect for the polygon</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawPolygon(System.Drawing.Color,System.Boolean,System.Drawing.Point[])">
+            <summary>
+            Draws a polygon with any number of sides on the main canvas
+            </summary>
+            <param name="color">The color to draw with</param>
+            <param name="fill">Whether to fill it in or not</param>
+            <param name="points">The points to connect for the polygon</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.DrawPolygon(System.Drawing.Color,System.String,System.Boolean,System.Drawing.Point[])">
+            <summary>
+            Draws a polygon with any number of sides on the main canvas
+            </summary>
+            <param name="color">The color to draw with</param>
+            <param name="name">The name to associate this with</param>
+            <param name="fill">Whether to fill it in or not</param>
+            <param name="points">The points to connect for the polygon</param>
+        </member>
+        <member name="M:EasyDrawLib.EasyDrawForm.IsTouchingEdge(EasyDrawLib.GraphicsItem,EasyDrawLib.ScreenBorders[])">
+            <summary>
+            Determines whether any sprite is touching a wall or not
+            </summary>
+            <param name="item">The sprite to check</param>
+            <param name="screenBorders">The edges to check against</param>
+            <returns></returns>
+        </member>
+        <member name="P:EasyDrawLib.EasyDrawForm.GridPosition">
+            <summary>
+            Gets current mouse position in grid coordinates
+            </summary>
+        </member>
+        <member name="E:EasyDrawLib.EasyDrawForm.ReadyToDraw">
+            <summary>
+            An event that runs when the form is ready to draw
+            </summary>
+        </member>
+        <member name="E:EasyDrawLib.EasyDrawForm.OnUpdate">
+            <summary>
+            An event that runs when the form updates itself
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.EasyDrawForm.DrawColor">
+            <summary>
+            The default color to draw everything with
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.EasyDrawForm.PenThickness">
+            <summary>
+            The pen thickness to use when drawing
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.EasyDrawForm.GridSize">
+            <summary>
+            Set the size of the grid. Default is 10
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.EasyDrawForm.ShowGrid">
+            <summary>
+            Show or hide the drawing grid for this EasyDrawForm
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.EasyDrawForm.UpdateTime">
+            <summary>
+            How often the form updates
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.EasyDrawForm.StartUpdating">
+            <summary>
+            A boolean determining whether to start the update timer.
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.EasyDrawForm.Sprites">
+            <summary>
+            The collection of all things drawn.
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.EasyDrawForm.ClientSizeGrid">
+            <summary>
+            The size of the cliensize converted to grid coordinates.
+            </summary>
+        </member>
+        <member name="T:EasyDrawLib.ScreenBorders">
+            <summary>
+            Borders of the screen
+            </summary>
+        </member>
+        <member name="F:EasyDrawLib.ScreenBorders.Top">
+            <summary>
+            The top of the screen
+            </summary>
+        </member>
+        <member name="F:EasyDrawLib.ScreenBorders.Left">
+            <summary>
+            The left side of the screen
+            </summary>
+        </member>
+        <member name="F:EasyDrawLib.ScreenBorders.Right">
+            <summary>
+            The right side of the screen
+            </summary>
+        </member>
+        <member name="F:EasyDrawLib.ScreenBorders.Bottom">
+            <summary>
+            The bottom of the screen
+            </summary>
+        </member>
+        <member name="T:EasyDrawLib.Triangle">
+            <summary>
+            A triangle that can be drawn
+            </summary>
+        </member>
+        <member name="T:EasyDrawLib.Polygon">
+            <summary>
+            A polygon that can be drawn
+            </summary>
+        </member>
+        <member name="F:EasyDrawLib.Polygon._fill">
+            <summary>
+            A boolean determining whether to fill it in when drawing
+            </summary>
+        </member>
+        <member name="F:EasyDrawLib.Polygon._points">
+            <summary>
+            The points to connect when drawing
+            </summary>
+        </member>
+        <member name="F:EasyDrawLib.Polygon._scaledDrawPoints">
+            <summary>
+            The draw points relative to grid size
+            </summary>
+        </member>
+        <member name="M:EasyDrawLib.Polygon.#ctor(System.Drawing.Color,System.Single,System.Boolean,System.Drawing.Point[])">
+            <summary>
+            A polygon that can be drawn 
+            </summary>
+            <param name="DrawColor">The color to draw with</param>
+            <param name="PenThickness">The pen thickness to use when drawing</param>
+            <param name="fill">Whether to fill it in or not</param>
+            <param name="points">The points to connect when drawing</param>
+        </member>
+        <member name="M:EasyDrawLib.Polygon.Draw(System.Int32)">
+            <summary>
+            Draws the polygon relative to gridsize
+            </summary>
+            <param name="gridSize">The gridsize to scale by</param>
+        </member>
+        <member name="P:EasyDrawLib.Polygon.DrawAction">
+            <summary>
+            The function to draw with
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Polygon.FillAction">
+            <summary>
+            The function to fill with
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Polygon.Points">
+            <summary>
+            The points to connect when drawing
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Polygon.Left">
+            <summary>
+            The left of the polygon
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Polygon.Right">
+            <summary>
+            The right of the polygon
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Polygon.Top">
+            <summary>
+            The top of the polygon
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Polygon.Bottom">
+            <summary>
+            The bottom of the polygon
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Polygon.Width">
+            <summary>
+            The width of the polygon
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Polygon.Height">
+            <summary>
+            The height of the polygon
+            </summary>
+        </member>
+        <member name="M:EasyDrawLib.Triangle.#ctor(System.Drawing.Color,System.Single,System.Boolean,System.Drawing.Point[])">
+            <summary>
+            A triangle that can be drawn
+            </summary>
+            <param name="DrawColor">The color to draw with</param>
+            <param name="PenThickness">The pen thickness to use when drawing</param>
+            <param name="fill">Whether to fill it in or not</param>
+            <param name="points">The points to connect, only taking into account the first 3</param>
+        </member>
+        <member name="P:EasyDrawLib.Triangle.Point1">
+            <summary>
+            The first point to connect
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Triangle.Point2">
+            <summary>
+            The second point to connect
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Triangle.Point3">
+            <summary>
+            The third point to connect
+            </summary>
+        </member>
+        <member name="T:EasyDrawLib.GraphicsItemsCollection">
+            <summary>
+            The collection of all sprites being drawn
+            </summary>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsItemsCollection.IndexOf(EasyDrawLib.GraphicsItem)">
+            <summary>
+            Gets the index of a sprite
+            </summary>
+            <param name="item">The item to get the index of</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsItemsCollection.Insert(System.Int32,EasyDrawLib.GraphicsItem)">
+            <summary>
+            Inserts a sprite into the collection
+            </summary>
+            <param name="index">The index to insert into</param>
+            <param name="item">The item to insert</param>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsItemsCollection.RemoveAt(System.Int32)">
+            <summary>
+            Removes a specific sprite at a particular spot
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsItemsCollection.Add(EasyDrawLib.GraphicsItem)">
+            <summary>
+            Adds a sprite to the collection
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsItemsCollection.Add(EasyDrawLib.GraphicsItem,System.String)">
+            <summary>
+            Adds a sprite with a name
+            </summary>
+            <param name="item">The sprite to add</param>
+            <param name="name">The name to associate it with</param>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsItemsCollection.Clear">
+            <summary>
+            Clears the entire list of sprites and names
+            </summary>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsItemsCollection.Contains(EasyDrawLib.GraphicsItem)">
+            <summary>
+            Checks if a sprite is in the collection
+            </summary>
+            <param name="item">The sprite to add</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsItemsCollection.Contains(System.String)">
+            <summary>
+            Checks if a sprite with a particular name is in the collection
+            </summary>
+            <param name="name">The name of the sprite to look for</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsItemsCollection.CopyTo(EasyDrawLib.GraphicsItem[],System.Int32)">
+            <summary>
+            Copies the entire List to a compatible one-dimensionalarray, starting at the specified index of the target array.
+            </summary>
+            <param name="array">The array to copy into</param>
+            <param name="arrayIndex">The index to start with</param>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsItemsCollection.Remove(EasyDrawLib.GraphicsItem)">
+            <summary>
+            Removes a particular sprite from the collection
+            </summary>
+            <param name="item">The item to remove</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsItemsCollection.Remove(System.String)">
+            <summary>
+            Removes a sprite with a particular name from the collection
+            </summary>
+            <param name="name">The name of the sprite to remove</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsItemsCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItemsCollection.Item(System.Int32)">
+            <summary>
+            Gets a sprite at a particular index
+            </summary>
+            <param name="index">The index to get the item from</param>
+            <returns></returns>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItemsCollection.Item(System.String)">
+            <summary>
+            Gets a sprite with a particular name
+            </summary>
+            <param name="name">The name to look for</param>
+            <returns></returns>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItemsCollection.Count">
+            <summary>
+            The number of items in the collection
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsItemsCollection.IsReadOnly">
+            <summary>
+            Not implemented
+            </summary>
+        </member>
+        <member name="T:EasyDrawLib.GraphicsActions">
+            <summary>
+            The class that contains all actions for sprites being drawn
+            </summary>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsActions.FillEllipse(System.Drawing.Brush,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Fills an ellipse
+            </summary>
+            <param name="brush"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsActions.DrawEllipse(System.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Draws an ellipse
+            </summary>
+            <param name="pen"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsActions.FillRectangle(System.Drawing.Brush,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Fills a rectangle
+            </summary>
+            <param name="brush"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsActions.DrawRectangle(System.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Draws a rectangle
+            </summary>
+            <param name="pen"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsActions.DrawLine(System.Drawing.Pen,System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            Draws a line
+            </summary>
+            <param name="pen"></param>
+            <param name="p1"></param>
+            <param name="p2"></param>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsActions.FillPolygon(System.Drawing.Brush,System.Drawing.Point[])">
+            <summary>
+            Fills a polygon
+            </summary>
+            <param name="brush"></param>
+            <param name="points"></param>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsActions.DrawPolygon(System.Drawing.Pen,System.Drawing.Point[])">
+            <summary>
+            Draws a polygon
+            </summary>
+            <param name="pen"></param>
+            <param name="points"></param>
+        </member>
+        <member name="M:EasyDrawLib.GraphicsActions.#ctor(System.Drawing.Graphics)">
+            <summary>
+            Initializes a class that contains all draw functions
+            </summary>
+            <param name="gfx"></param>
+        </member>
+        <member name="P:EasyDrawLib.GraphicsActions.GFX">
+            <summary>
+            The graphics object this class is drawing with
+            </summary>
+        </member>
+        <member name="T:EasyDrawLib.Line">
+            <summary>
+            A line that can be drawn
+            </summary>
+        </member>
+        <member name="M:EasyDrawLib.Line.#ctor(System.Drawing.Color,System.Single,System.Drawing.Point,System.Drawing.Point,System.Action{System.Drawing.Pen,System.Drawing.Point,System.Drawing.Point})">
+            <summary>
+            The line to be drawn
+            </summary>
+            <param name="DrawColor">The color to draw with</param>
+            <param name="PenThickness">The thickness of pen to use when drawing</param>
+            <param name="point1">The first point to connect</param>
+            <param name="point2">The second point to connect</param>
+            <param name="drawAction">The function to use for drawing this</param>
+        </member>
+        <member name="M:EasyDrawLib.Line.Draw(System.Int32)">
+            <summary>
+            Draws the line relative to the current gridsize
+            </summary>
+            <param name="gridSize"></param>
+        </member>
+        <member name="P:EasyDrawLib.Line.Point2">
+            <summary>
+            The second point to connect
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Line.Left">
+            <summary>
+            The left side of the line
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Line.Top">
+            <summary>
+            The top of the line
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Line.Width">
+            <summary>
+            The width of the line
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Line.Height">
+            <summary>
+            The height of the line
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Line.Point1">
+            <summary>
+            The first point to connect
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Line.X">
+            <summary>
+            The x coordinate of the first point of this line.
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Line.Y">
+            <summary>
+            The Y coordinate of the first point of the line.
+            </summary>
+        </member>
+        <member name="P:EasyDrawLib.Line.DrawAction">
+            <summary>
+            The function to be used to draw with
+            </summary>
+        </member>
+    </members>
+</doc>
